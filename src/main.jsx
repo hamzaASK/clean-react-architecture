@@ -6,6 +6,7 @@ import GlobalProviders from "./infrastructure/providers";
 import { Provider as ReduxProvider } from "react-redux";
 import { store } from "./infrastructure/adapters/state/store";
 import { i18nAdapter } from './infrastructure/adapters/i18n/i18nAdapter';
+import './index.css'
 
 // Initialise i18n avant de rendre l’app
 i18nAdapter.init().then(() => {

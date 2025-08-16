@@ -1,23 +1,34 @@
+import { Button } from "@/common/components/ui/button.jsx";
 import Header from "../../../common/components/organisms/Header/Header.jsx";
 import { useFetchAllQuery } from "../../../infrastructure/adapters/api/productAdapter.js";
 import Cart from "../../cart/components/Cart.jsx";
 import { useCart } from "../../cart/hooks/useCart.js";
-import React from "react";
+import Test from "./Test.jsx";
+import { SidebarProvider } from "@/common/components/ui/sidebar.jsx";
 
 const ProductList = () => {
   const { data: products, error, isLoading } = useFetchAllQuery();
 
-  return (<>
-    <Header />
-    <Cart />
-    <div style={styles.container}>
-      <br />
-      <br />
-      {products?.products?.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+  return (
+    <div>
+      {/* <SidebarProvider>
+        
+      <Test>
+      </Test>
+</SidebarProvider> */}
+
+      <Header />
+      <Cart />
+      <div style={styles.container}>
+        <br />
+        <Button className="bg-red-500" >Hamzaaaaaaaaaaaaaaaaa</Button>
+        <br />
+        {products?.products?.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+
     </div>
-  </>
   );
 };
 

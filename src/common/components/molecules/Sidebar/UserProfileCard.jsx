@@ -1,6 +1,6 @@
 "use client";
-import { UserAvatar } from "@/common/components/atoms/Image/UserAvatar";
-import { UserInfo } from "@/common/components/molecules/Sidebar/UserInfo";
+import React from "react";
+import UserAvatar from "../../atoms/Image/UserAvatar";
 
 export const UserProfileCard = React.memo(function ({ user, avatarClassName = "" }) {
     return (
@@ -9,7 +9,12 @@ export const UserProfileCard = React.memo(function ({ user, avatarClassName = ""
                 src={user.avatar}
                 className={`h-8 w-8 rounded-lg ${avatarClassName}`}
             />
-            <UserInfo name={user.name} email={user.email} />
+            <div className="grid flex-1 text-left text-sm leading-tight">
+                <span className="truncate font-medium">{user.name}</span>
+                <span className="text-muted-foreground truncate text-xs">
+                    {user.email}
+                </span>
+            </div>
         </div>
     );
 }) 

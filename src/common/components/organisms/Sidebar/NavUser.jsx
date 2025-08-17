@@ -1,25 +1,18 @@
 "use client";
-import React from "react";
-import { IconCreditCard, IconDotsVertical, IconLogout, IconNotification, IconUserCircle } from "@tabler/icons-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuSeparator
 } from "@/common/components/ui/dropdown-menu";
-import { UserAvatar } from "@/common/components/atoms/Image/UserAvatar";
-import { UserInfo } from "@/common/components/molecules/Sidebar/UserInfo";
 import {
   SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
+  SidebarMenuItem
 } from "@/common/components/ui/sidebar";
+import { IconCreditCard, IconDotsVertical, IconLogout, IconNotification, IconUserCircle } from "@tabler/icons-react";
 import DropdownIconItem from "../../atoms/DropDownMenu/DropdownIconItem";
-import { UserProfileCard } from "../../molecules/Sidebar/UserProfileCard";
 import { UserButtonTrigger } from "../../molecules/Sidebar/UserButtonTrigger";
+import { UserProfileCard } from "../../molecules/Sidebar/UserProfileCard";
 
 export function NavUser({ user }) {
   return (

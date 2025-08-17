@@ -1,6 +1,6 @@
 "use client";
 import { IconDotsVertical } from "@tabler/icons-react";
-import { UserAvatar } from "@/common/components/atoms/Image/UserAvatar";
+import UserAvatar from "../../atoms/Image/UserAvatar";
 
 // UserButtonTrigger.js
 export function UserButtonTrigger({ 

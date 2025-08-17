@@ -149,7 +149,7 @@ const data = {
 export function DashboardLayout({ children }) {
   return (
     <SidebarProvider defaultOpen={true} style={{ "--sidebar-width": "260px", "--sidebar-width-mobile": "200px" }}>
-      <Sidebar variant="inset" collapsible="offcanvas" side="left">
+      <Sidebar variant="inset" collapsible="icon" side="left">
         <SidebarHeader>
           <SidebarMenu>
             <SidebarMenuItem>
@@ -167,11 +167,10 @@ export function DashboardLayout({ children }) {
           <NavMain items={data.navMain} />
           <NavDocuments items={data.documents} />
           <NavSecondary items={data.navSecondary} className="mt-auto" />
-          <NavUser user={data.user} className="mt-auto" />
         </SidebarContent>
 
         <SidebarFooter>
-          {/* footer options... */}
+          <NavUser user={data.user} className="mt-auto" />
         </SidebarFooter>
 
         <SidebarRail />
